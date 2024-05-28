@@ -64,6 +64,24 @@ const onError = (error)=>{
     console.log(error);
     // alert("User Denied the location.......");
 }
+search.addEventListener("keypress",function(evente){
+    if (evente.key === "Enter") {
+       
+        
+        document.getElementById("btn").click();
+      }
+});
+
+// input.addEventListener("keypress", function(event) {
+//     // If the user presses the "Enter" key on the keyboard
+//     if (event.key === "Enter") {
+//       // Cancel the default action, if needed
+//       event.preventDefault();
+//       // Trigger the button element with a click
+//       document.getElementById("myBtn").click();
+//     }
+//   });
+
 
 btn.addEventListener("click",()=>{
     checkWeather(apiUrl + search.value + `&appid=${apikey}`);
